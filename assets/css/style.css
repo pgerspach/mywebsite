@@ -6,7 +6,7 @@
   --color2: rgb(12, 35, 64);
   --color3: #ef8553;
   --color4: #2ec4b6;
-  --color5: #E55934;
+  --color5: #AAA1C8;
 }
 html,
 body {
@@ -99,7 +99,7 @@ p {
   height:auto;
   padding-bottom:40px;
 }
-.about {
+.floatingDesc {
   min-height: calc(80vh);
   width: 900px;
   background-color: var(--color3);
@@ -110,6 +110,21 @@ p {
   box-shadow: 1px 3px 2px 6px var(--color3);
   padding: 20px 120px 20px 120px;
   justify-content: space-around;
+}
+.floatingDesc.recruit{
+  background-color: var(--color3);
+  box-shadow: 1px 3px 2px 6px var(--color3);
+
+}
+.floatingDesc.quote{
+  background-color: var(--color5);
+  box-shadow: 1px 3px 2px 6px var(--color5);
+}
+.about{
+  background: var(--color5);
+  box-shadow: var(--color5);
+  box-shadow: 1px 3px 2px 6px var(--color5);
+
 }
 .me,
 .nd {
@@ -183,7 +198,7 @@ p {
 }
 
 @media only screen and (max-width: 900px) {
-  .about {
+  .floatingDesc {
     width: 100vw;
   }
   
@@ -205,7 +220,7 @@ p {
   }
 }
 @media only screen and (max-width: 799px) {
-  .about {
+  .floatingDesc {
     width: 100vw;
     padding:20px 30px;
   }
