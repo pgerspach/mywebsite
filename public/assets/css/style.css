@@ -232,6 +232,13 @@ p {
   } */
 }
 @media only screen and (max-width:400px){
+  .siteMain{
+    background-attachment: scroll;
+
+  }
+  .aboutBack{
+    background-attachment: scroll;
+  }
   .firstProjPic,
   .secondProjPic{
     min-height: 0;
