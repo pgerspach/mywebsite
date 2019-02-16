@@ -204,29 +204,55 @@ p {
     padding:20px 30px;
   }
   .portStart{
-    flex-direction: column;
-    justify-content: space-between;
+    /* flex-direction: column; */
+    /* justify-content: space-between; */
     height:auto;
     min-height: 0;
+    padding:0;
   }
-  .skillSet,
+  
   .firstProjPic,
-  .recruitDesc,
   .secondProjPic{
     min-height: 0;
     height:auto;
     width:100%;
     justify-content: center;
     padding:20px;
-    
-    
   }
+  .skillSet,
+  .recruitDesc{
+    display: none;
+  }
+  /*
   .secondProjPic{
     flex-direction: row;
   }
   #ndPlot{
     display:none;
+  } */
+}
+@media only screen and (max-width:400px){
+  .firstProjPic,
+  .secondProjPic{
+    min-height: 0;
+    height:auto;
+    width:100%;
+    justify-content: center;
+    padding:10px 0;
   }
-
-
+  .recruitPic {
+    width: 95vw;
+    height: calc(1 / 1.333 * 95vw);
+    border-radius: 20px;
+  }
+  .pageHeader{
+    padding:5px;
+  }
+  .pageHeaderTitle{
+    font-size:25px;
+  }
+  .socialIcon{
+    height:35px;
+    width:35px;
+  }
 }
