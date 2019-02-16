@@ -6,12 +6,9 @@ $(document).ready(() => {
   if (headerKeypoint) {
     $(".pageHeader").css("animation", "headerAnimateForwards 0s forwards");
     $(".socialIcons").css("animation", "animateSocialForward 0s forwards");
-
-
   } else {
     $(".pageHeader").css("animation", "headerAnimateReverse 0s forwards");
     $(".socialIcons").css("animation", "animateSocialReverse 0s forwards");
-
   }
   $(window).on("scroll", event => {
     if (
@@ -31,5 +28,11 @@ $(document).ready(() => {
 
       headerKeypoint = false;
     }
+  });
+
+  $(".descButton").click(event => {
+    $($(event.target.parentElement)[0].children[1]).css("display", $($(event.target.parentElement)[0].children[1]).css("display")==="none"?"flex":"none");
+    $($(event.target.parentElement)[0].children[2]).css("display", $($(event.target.parentElement)[0].children[2]).css("display")==="none"?"flex":"none");
+
   });
 });
