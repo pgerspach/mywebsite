@@ -261,7 +261,8 @@ p {
     background-attachment: scroll;
   }
   .firstProjPic,
-  .secondProjPic{
+  .secondProjPic,
+  .thirdProjPic{
     min-height: 0;
     height:auto;
     width:100%;
