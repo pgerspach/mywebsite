@@ -31,8 +31,10 @@ $(document).ready(() => {
   });
 
   $(".descButton").click(event => {
+    if($(event.target)[0].localName === "i"){
+      event.target = $(event.target)[0].parentElement;
+    }
     $($(event.target.parentElement)[0].children[1]).css("display", $($(event.target.parentElement)[0].children[1]).css("display")==="none"?"flex":"none");
     $($(event.target.parentElement)[0].children[2]).css("display", $($(event.target.parentElement)[0].children[2]).css("display")==="none"?"flex":"none");
-
   });
 });
