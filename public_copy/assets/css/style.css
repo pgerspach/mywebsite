@@ -1,0 +1,271 @@
+
+
+:root {
+  --headerHeight: 60px;
+  --color1: rgb(246, 244, 243);
+  --color2: rgb(12, 35, 64);
+  --color3: #ef8553;
+  --color4: #2ec4b6;
+  --color5: #E55934;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  overflow-y: visible;
+  overflow-x: hidden;
+
+}
+.column {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  flex-shrink: 0;
+  flex-grow: 0;
+  align-items: center;
+  overflow-y:visible;
+  height:auto;
+}
+.row {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  flex-shrink: 0;
+  flex-grow: 0;
+  align-items: center;
+  justify-content: space-between;
+  overflow-y:visible;
+  height:auto;
+}
+h1 {
+  font-family: "Montserrat";
+  font-size: 30px;
+}
+p {
+  font-family: "Montserrat";
+
+  line-height: 1.3em;
+}
+.container {
+  box-sizing: border-box;
+  height: auto;
+  overflow-y: scroll;
+}
+
+.socialIcon {
+  padding: 0 0px 0 20px;
+}
+.pageHeader {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: var(--headerHeight);
+  padding: 0 40px 0 40px;
+  background-color: var(--color2);
+  z-index: 80;
+}
+.pageHeaderTitle {
+  height: 1.2em;
+  width: fit-content;
+  color: var(--color1);
+}
+.siteMain {
+  height: auto;
+  min-height: 100vh;
+  overflow-y: visible;
+  background-image: url("../images/aboutBack.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  /* filter:grayscale(100%) contrast(130%); */
+  background-position: center;
+  padding: 0 10vw 0 10vw;
+}
+/* .stillOverlay{
+  position: fixed;
+  top:calc(var(--headerHeight) + 30px);
+  left:30px;
+} */
+.aboutBack {
+  min-height: calc(100vh);
+  background-image: url("../images/aboutBack.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-y: visible;
+  justify-content: space-around;
+  /* filter:grayscale(100%) contrast(130%); */
+  background-position: center;
+  height:auto;
+  padding-bottom:40px;
+}
+.about {
+  min-height: calc(80vh);
+  width: 900px;
+  background-color: var(--color3);
+  border: 0px solid var(--color2);
+  border-radius: 20px;
+  position: relative;
+  top: 0;
+  box-shadow: 1px 3px 2px 6px var(--color3);
+  padding: 20px 120px 20px 120px;
+  justify-content: space-around;
+}
+.me,
+.nd {
+  border: 0px solid black;
+  border-radius: 100px;
+  box-shadow: 0 0 3px 3px lightgrey;
+}
+
+.me:hover {
+  transform: scale(1.5);
+}
+.portStart {
+  width: 100%;
+  min-height: calc(100vh);
+  height:auto;
+  background-color: var(--color2);
+  justify-content: flex-end;
+  overflow-y: visible;
+  height: auto;
+}
+.portStart2 {
+  justify-content: flex-start;
+}
+.firstProjPic {
+  width: 50%;
+  height: 100%;
+  padding: 5%;
+  border-right: 1px solid black;
+  background-color: var(--color4);
+  flex-wrap: wrap;
+  align-content: center;
+  justify-items: flex-start;
+  justify-content: space-between;
+  
+}
+.skillIcon {
+  height: 80px;
+  width: 80px;
+  padding: 8px;
+}
+.skillSet,
+.recruitDesc {
+  box-sizing: border-box;
+  height: 100%;
+  width: 50%;
+  padding: 20px;
+  justify-content: center;
+  color: white;
+  overflow-y: visible;
+  height: auto;
+}
+.secondProjPic,
+.thirdProjPic {
+  width: 50%;
+  min-height: 100%;
+  height:auto;
+  overflow-y: visible;
+  background-color: var(--color4);
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}
+#quotePlot{
+  object-fit: cover;
+}
+.recruitPic {
+  width: 400px;
+  height: 300px;
+  border-radius: 20px;
+  box-shadow:2px 2px 10px 1px black;
+
+}
+
+@media only screen and (max-width: 900px) {
+  .about {
+    width: 100vw;
+  }
+  
+}
+@keyframes headerAnimateForwards {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(0px - var(--headerHeight));
+  }
+}
+@keyframes headerAnimateReverse {
+  from {
+    top: calc(0px - var(--headerHeight));
+  }
+  to {
+    top: 0;
+  }
+}
+@media only screen and (max-width: 799px) {
+  .about {
+    width: 100vw;
+    padding:20px 30px;
+  }
+  .portStart{
+    /* flex-direction: column; */
+    /* justify-content: space-between; */
+    height:auto;
+    min-height: 0;
+    padding:0;
+  }
+  
+  .firstProjPic,
+  .secondProjPic{
+    min-height: 0;
+    height:auto;
+    width:100%;
+    justify-content: center;
+    padding:20px;
+  }
+  .skillSet,
+  .recruitDesc{
+    display: none;
+  }
+  /*
+  .secondProjPic{
+    flex-direction: row;
+  }
+  #ndPlot{
+    display:none;
+  } */
+}
+@media only screen and (max-width:600px){
+  .siteMain{
+    background-attachment: scroll;
+
+  }
+  .aboutBack{
+    background-attachment: scroll;
+  }
+  .firstProjPic,
+  .secondProjPic{
+    min-height: 0;
+    height:auto;
+    width:100%;
+    justify-content: center;
+    padding:10px 0;
+  }
+  .recruitPic {
+    width: 95vw;
+    height: calc(1 / 1.333 * 95vw);
+    border-radius: 20px;
+  }
+  .pageHeader{
+    padding:5px;
+  }
+  .pageHeaderTitle{
+    font-size:25px;
+  }
+  .socialIcon{
+    height:35px;
+    width:35px;
+  }
+}
